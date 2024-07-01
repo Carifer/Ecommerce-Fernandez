@@ -1,37 +1,69 @@
 import CartWidget from "../cartWidget/CartWidget";
-import { Outlet, Link } from "react-router-dom";
-import "./navbar.css";
+import { Link } from "react-router-dom";
+import { Grid, Button } from "@mui/material";
 
 export const Navbar = () => {
   return (
-    <>
-      <div className="nabvarContainer">
+    <Grid
+      container
+      spacing={2}
+      style={{
+        backgroundColor: "darkviolet",
+        alignContent: "center",
+        display: "flex",
+      }}
+    >
+      <Grid item xs={1} sx={{ alignContent: "center" }}>
         <Link to="/">
           <img
             src="https://res.cloudinary.com/dxxpxlqdl/image/upload/v1719612686/logo_1_z741rr.png"
-            alt=""
-            style={{ width: "100px", heigth: "100px", objectFit: "cover" }}
+            alt="CMF Muebles"
+            style={{ width: "50px", heigth: "50px" }}
           ></img>
         </Link>
-        <ul style={{ display: "flex", gap: "20px" }}>
-          <Link to="/" className="linkMenu">
-            Todos
-          </Link>
-          <Link to="/category/Camas" className="linkMenu">
-            Camas
-          </Link>
-          <Link to="/category/Escritorios" className="linkMenu">
-            Escritorios
-          </Link>
-          <Link to="/category/Mesas" className="linkMenu">
-            Mesas
-          </Link>
-          <Link to="/category/Roperos" className="linkMenu">
-            Roperos
-          </Link>
-        </ul>
+      </Grid>
+      <Grid item xs={10} sx={{ alignContent: "center" }}>
+        <Grid container spacing={0.5}>
+          <Grid item>
+            <Link to="/">
+              <Button variant="contained" sx={{ textTransform: "none" }}>
+                Todos
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/category/Camas">
+              <Button variant="contained" sx={{ textTransform: "none" }}>
+                Camas
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/category/Escritorios">
+              <Button variant="contained" sx={{ textTransform: "none" }}>
+                Escritorios
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/category/Mesas">
+              <Button variant="contained" sx={{ textTransform: "none" }}>
+                Mesas
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/category/Roperos">
+              <Button variant="contained" sx={{ textTransform: "none" }}>
+                Roperos
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={1} sx={{ alignContent: "center" }}>
         <CartWidget />
-      </div>
-    </>
+      </Grid>
+    </Grid>
   );
 };

@@ -1,9 +1,0 @@
-.footerContainer {
-  background-color: blueviolet;
-  background-clip: padding-box;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  min-height: 10vh;
-  align-items: center;
-}

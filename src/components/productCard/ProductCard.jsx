@@ -11,13 +11,7 @@ import {
 
 export const ProductCard = ({ title, description, price, id, img }) => {
   return (
-    /*  <div style={{ border: "2px solid purple" }}>
-      <h2>{title}</h2>
-      <h3>{description}</h3>
-      <h3>{price}</h3>
-      <Link to={`/itemDetail/${id}`}>Ver mas...</Link>
-    </div> */
-    <Card sx={{ width: 345 }} variant="outlined">
+    <Card sx={{ width: 345 }} variant="elevation">
       <CardActionArea>
         <CardMedia
           component="img"
@@ -32,6 +26,9 @@ export const ProductCard = ({ title, description, price, id, img }) => {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" align="right">
+            $ {price}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,5 +1,19 @@
-import "./footer.css";
+import { Grid, Typography } from "@mui/material";
 
 export const Footer = () => {
-  return <div className="footerContainer">2024 - E-commerce</div>;
+  return (
+    <Grid
+      container
+      style={{
+        backgroundColor: "darkviolet",
+        alignContent: "center",
+      }}
+    >
+      <Grid item>
+        <Typography variant="body1" color="yellow" textAlign="center">
+          2024 - E-commerce: Carina Fernandez
+        </Typography>
+      </Grid>
+    </Grid>
+  );
 };
