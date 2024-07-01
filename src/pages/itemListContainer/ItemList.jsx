@@ -11,6 +11,8 @@ export const ItemList = ({ items, messageError }) => {
             title={item.title}
             description={item.description}
             price={item.price}
+            img={item.img}
+            id={item.id}
           />
         );
       })}
