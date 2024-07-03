@@ -8,6 +8,7 @@ import {
   CardActionArea,
   CardActions,
   Grid,
+  CardHeader,
 } from "@mui/material";
 
 const ItemDetail = ({ item }) => {
@@ -27,6 +28,8 @@ const ItemDetail = ({ item }) => {
           sx={{ alignContent: "center", padding: "50px", textAlign: "center" }}
         >
           <Card sx={{ width: 345 }}>
+            <CardHeader title={item.title}></CardHeader>
+
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -35,14 +38,15 @@ const ItemDetail = ({ item }) => {
                 alt={item.title}
               />
               <CardContent>
-                <Typography gutterBottom variant="h4" component="div">
-                  {item.title}
-                </Typography>
                 <Typography variant="body1" color="text.secondary">
                   {item.description}
                 </Typography>
-                <Typography variant="body2" align="right">
-                  $ {item.price}
+                <Typography
+                  variant="body2"
+                  align="right"
+                  sx={{ paddingTop: "10px" }}
+                >
+                  Precio: $ {item.price}
                 </Typography>
                 <Typography
                   align="right"
@@ -51,7 +55,7 @@ const ItemDetail = ({ item }) => {
                     paddingTop: "10px",
                   }}
                 >
-                  {item.category}
+                  Categoria: {item.category}
                 </Typography>
               </CardContent>
             </CardActionArea>

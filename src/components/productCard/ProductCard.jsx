@@ -8,6 +8,7 @@ import {
   CardActionArea,
   CardActions,
 } from "@mui/material";
+import { red } from "@mui/material/colors";
 
 export const ProductCard = ({ title, description, price, id, img }) => {
   return (

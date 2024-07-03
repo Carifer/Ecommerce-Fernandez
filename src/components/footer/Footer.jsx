@@ -7,6 +7,8 @@ export const Footer = () => {
       style={{
         backgroundColor: "darkviolet",
         alignContent: "center",
+        bottom: 0,
+        position: "fixed",
       }}
     >
       <Grid item>
