@@ -11,7 +11,7 @@ import {
   CardHeader,
 } from "@mui/material";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   return (
     <>
       {/*  <div>
@@ -60,7 +60,7 @@ const ItemDetail = ({ item }) => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <CounterContainer />
+              <CounterContainer onAdd={onAdd} />
             </CardActions>
           </Card>
         </Grid>

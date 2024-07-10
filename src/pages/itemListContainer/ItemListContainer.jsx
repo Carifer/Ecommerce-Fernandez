@@ -31,8 +31,6 @@ const ItemListContainer = () => {
       });
   }, [name]);
 
-  console.log(items);
-
   return <ItemList messageError={error} items={items} />;
 };
 

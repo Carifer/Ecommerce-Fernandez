@@ -1,6 +1,6 @@
 import { Grid, Button, Typography } from "@mui/material";
 
-export const Counter = ({ contador, sumar, restar }) => {
+export const Counter = ({ contador, sumar, restar, onAdd }) => {
   return (
     <Grid container sx={{ padding: "10px" }}>
       <Grid item>
@@ -16,6 +16,11 @@ export const Counter = ({ contador, sumar, restar }) => {
       </Grid>
       <Grid item>
         <Button onClick={sumar}>+</Button>
+      </Grid>
+      <Grid item>
+        <Button variant="outlined" onClick={() => onAdd(contador)}>
+          Agregar al carrito
+        </Button>
       </Grid>
     </Grid>
   );
