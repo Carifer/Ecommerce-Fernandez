@@ -8,6 +8,7 @@ El proyecto consiste en el desarrollo de un e-commerce para la venta de muebles,
 
 1. [Instalación](#instalación)
 2. [Uso](#uso)
+3. [Funcionalidades](#funcionalidades)
 
 ## Instalación
 
@@ -35,11 +36,31 @@ npm i yup
 
 ## Uso
 
-Ejemplos y casos de uso del proyecto.
+Casos de uso del proyecto.
 
 ```bash
-# Ejemplo de cómo ejecutar el proyecto
+# Cómo ejecutar el proyecto
 npm run dev
 ```
 
 Se muestra la pantalla principal del sitio:
+
+![](logo/Home.PNG)
+
+## Funcionalidades
+
+- Filtrado por categorias:
+  Haciendo clic en los botones del menu se filtra la informacion por categorias
+  ![](logo/Menu%20categorias.PNG)
+
+- Ver detalle de cada producto
+  ![](logo/Detalle.PNG)
+
+- Agregar/quitar productos al carrito de compras
+  ![](logo/Contador.PNG)
+
+- Visualizar el carrito
+  ![](logo/Ver%20carrito.PNG)
+
+- Finalizar compra del carrito
+  ![](logo/Finalizar%20compra.PNG)
