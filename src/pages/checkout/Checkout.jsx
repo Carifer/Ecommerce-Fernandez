@@ -119,7 +119,6 @@ const Checkout = () => {
             <Button variant="contained" type="submit">
               Enviar
             </Button>
-            <Button>Cancelar</Button>
           </div>
         </form>
       )}
