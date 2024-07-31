@@ -11,7 +11,7 @@ import {
   CardHeader,
 } from "@mui/material";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, initial = 1 }) => {
   return (
     <>
       {/*  <div>
@@ -48,6 +48,9 @@ const ItemDetail = ({ item, onAdd }) => {
                 >
                   Precio: $ {item.price}
                 </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Srtock: {item.stock}
+                </Typography>
                 <Typography
                   align="right"
                   sx={{
@@ -60,7 +63,11 @@ const ItemDetail = ({ item, onAdd }) => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <CounterContainer onAdd={onAdd} />
+              <CounterContainer
+                onAdd={onAdd}
+                stock={item.stock}
+                initial={initial}
+              />
             </CardActions>
           </Card>
         </Grid>

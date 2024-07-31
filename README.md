@@ -1,8 +1,45 @@
-# React + Vite
+![](logo/logo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Proyecto: E-commerce Fernandez
 
-Currently, two official plugins are available:
+El proyecto consiste en el desarrollo de un e-commerce para la venta de muebles, realizado como proyecto final del curso de React de CoderHouse
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tabla de Contenidos
+
+1. [Instalación](#instalación)
+2. [Uso](#uso)
+
+## Instalación
+
+Instrucciones sobre cómo instalar y configurar el proyecto localmente.
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/Carifer/Ecommerce-Fernandez.git
+
+# Entrar al directorio del proyecto
+cd ecommerce-fernandez
+
+# Instalar dependencias
+npm install @mui/material @emotion/react @emotion/
+
+npm install @fontsource/roboto
+
+npm install @mui/icons-material
+
+npm install sweetalert2
+
+npm i yup
+
+```
+
+## Uso
+
+Ejemplos y casos de uso del proyecto.
+
+```bash
+# Ejemplo de cómo ejecutar el proyecto
+npm run dev
+```
+
+Se muestra la pantalla principal del sitio:

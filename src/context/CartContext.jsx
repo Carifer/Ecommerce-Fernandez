@@ -3,16 +3,16 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([{}, {}, {}]);
+  const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    let exite = isInCart(product.id);
-    if (exite) {
+    let existe = isInCart(product.id);
+    if (existe) {
       let newArray = cart.map((elemento) => {
         if (elemento.id === product.id) {
           return {
             ...elemento,
-            quantity: elemento.quantity + product.quantity,
+            quantity: product.quantity,
           };
         } else {
           return elemento;
@@ -33,7 +33,41 @@ const CartContextProvider = ({ children }) => {
     return existe;
   };
 
-  let data = { cart, addToCart, clearToCart };
+  const deleteProduct = (id) => {
+    let array = cart.filter((product) => product.id != id);
+    setCart(array);
+  };
+
+  const getQuantityById = (id) => {
+    let getProduct = cart.find((product) => product.id === id);
+
+    return getProduct?.quantity;
+  };
+
+  const getTotalPrice = () => {
+    let total = cart.reduce((acc, product) => {
+      return acc + product.price * product.quantity;
+    }, 0);
+
+    return total;
+  };
+
+  const getTotalItems = () => {
+    let total = cart.reduce((acc, element) => {
+      return acc + element.quantity;
+    }, 0);
+    return total;
+  };
+
+  let data = {
+    cart,
+    addToCart,
+    clearToCart,
+    deleteProduct,
+    getQuantityById,
+    getTotalPrice,
+    getTotalItems,
+  };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
